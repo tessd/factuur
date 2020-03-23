@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Klant index{% endblock %}
+
+{% block body %}
+    <h1>Klant index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Klantnr</th>
+                <th>Naam</th>
+                <th>Btwnr</th>
+                <th>Adres</th>
+                <th>Postcode</th>
+                <th>Plaats</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for klant in klants %}
+            <tr>
+                <td>{{ klant.id }}</td>
+                <td>{{ klant.klantnr }}</td>
+                <td>{{ klant.naam }}</td>
+                <td>{{ klant.btwnr }}</td>
+                <td>{{ klant.adres }}</td>
+                <td>{{ klant.postcode }}</td>
+                <td>{{ klant.plaats }}</td>
+                <td>
+                    <a href="{{ path('klant_show', {'id': klant.id}) }}">show</a>
+                    <a href="{{ path('klant_edit', {'id': klant.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('klant_new') }}">Create new</a>
+{% endblock %}
