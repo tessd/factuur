@@ -13,3 +13,27 @@ login:
   controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController::templateAction
   defaults:
     template: security/login.html.twig
+
+factuur:
+  path: /factuur
+  controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController::templateAction
+  defaults:
+    template: factuur/index.html.twig
+
+factuurregel:
+  path: /factuurregel
+  controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController::templateAction
+  defaults:
+    template: factuurregel/index.html.twig
+
+klant:
+  path: /klant
+  controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController::templateAction
+  defaults:
+    template: klant/index.html.twig
+
+product:
+  path: /product
+  controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController::templateAction
+  defaults:
+    template: product/index.html.twig
