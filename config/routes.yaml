@@ -37,3 +37,9 @@ product:
   controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController::templateAction
   defaults:
     template: product/index.html.twig
+
+contact:
+  path: /contact
+  controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController::templateAction
+  defaults:
+    template: contact/index.html.twig
